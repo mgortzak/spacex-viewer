@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <th>Flight Number</th>
+    <th>Launch date @ UTC</th>
+    <th>Launch date @ local</th>
+  </tr>
+
+  <tr *ngFor="let launch of launches">
+    <td>{{launch.id}}</td>
+    <td>{{launch.launchDatetimeUtc}}</td>
+    <td>{{launch.launchDatetimeLocal}}</td>
+  </tr>
+
+</table>
