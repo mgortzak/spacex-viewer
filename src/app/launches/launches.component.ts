@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Launch} from "../models/launch.model";
 import {LaunchesService} from "../services/launches.service";
+import {Observable} from "rxjs/Observable";
 
 @Component({
   selector: 'app-launches',
@@ -9,12 +10,13 @@ import {LaunchesService} from "../services/launches.service";
 })
 export class LaunchesComponent implements OnInit {
 
-  launches: Launch[];
+  launches$: Observable<Launch[]>;
 
   constructor(private launchesService: LaunchesService) {
   }
 
   ngOnInit() {
-    this.launches = this.launchesService.getPastLaunches();
+    this.launches$ = this.launchesService.pastLaunches();
+
   }
 }
