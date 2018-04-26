@@ -1,4 +1,3 @@
-<div *ngIf="id">
-  <youtube-player [videoId]="id" (ready)="savePlayer($event)" (change)="onStateChange($event)">
-  </youtube-player>
+<div *ngIf="watchLink">
+  <iframe width="100%" height="300" [src]="embedLink | safe" frameborder="0" allowfullscreen></iframe>
 </div>
