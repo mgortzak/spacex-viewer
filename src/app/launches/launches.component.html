@@ -5,7 +5,7 @@
     <th>Launch date @ local</th>
   </tr>
 
-  <tr *ngFor="let launch of launches">
+  <tr *ngFor="let launch of launches | async">
     <td>{{launch.flight_number}}</td>
     <td>{{launch.launch_date_utc}}</td>
     <td>{{launch.launch_date_local}}</td>
