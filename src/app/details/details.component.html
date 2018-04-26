@@ -3,6 +3,13 @@
   <li class="list-group-item">Flight Number: {{launch.flight_number}}</li>
   <li class="list-group-item">Launch date UTC: {{launch.launch_date_utc}}</li>
   <li class="list-group-item">Launch date localtime: {{launch.launch_date_local}}</li>
+  <li class="list-group-item">Success: {{launch.launch_success ? 'Success': 'Failure'}}</li>
+  <li class="list-group-item">Launch site: {{launch.launch_site.site_name_long}}</li>
   <li class="list-group-item">Rocket: {{launch.rocket.rocket_name}}</li>
   <li class="list-group-item">Details: {{launch.details}}</li>
+  <li class="list-group-item">Telemetry: {{launch.telemetry.flight_club}}</li>
+  <li class="list-group-item">Mission patch: {{launch.links.mission_patch_small}}</li>
+  <li class="list-group-item">Presskit: {{launch.links.presskit}}</li>
+  <li class="list-group-item">Article: {{launch.links.article_link}}</li>
+  <li class="list-group-item">Video: {{launch.links.video_link}}</li>
 </ul>
