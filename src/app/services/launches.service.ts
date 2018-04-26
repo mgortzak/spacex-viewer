@@ -13,7 +13,7 @@ export class LaunchesService {
 
   pastLaunches(): Observable<Launch[]> {
     console.log('pastLaunches')
-    return this.http.get('assets/launches.json')
+    return this.http.get('https://api.spacexdata.com/v2/launches?order=desc')
       .map(launches => launches.json())
   }
 
