@@ -10,14 +10,14 @@
   <li *ngIf="launch.telemetry.flight_club" class="list-group-item">
     Telemetry: <a href="{{launch.telemetry.flight_club}}">{{launch.telemetry.flight_club}}</a>
   </li>
-  <li *ngIf="launch.links.mission_patch_small" class="list-group-item">
-    Mission patch: {{launch.links.mission_patch_small}}
-  </li>
   <li *ngIf="launch.links.presskit" class="list-group-item">
-    Presskit: {{launch.links.presskit}}
+    Presskit: <a href="{{launch.links.presskit}}">{{launch.links.presskit}}</a>
   </li>
   <li *ngIf="launch.links.article_link" class="list-group-item">
-    Article: {{launch.links.article_link}}
+    Article: <a href="{{launch.links.article_link}}">{{launch.links.article_link}}</a>
+  </li>
+  <li *ngIf="launch.links.mission_patch_small" class="list-group-item">
+    <img src="{{launch.links.mission_patch_small}}">
   </li>
   <li *ngIf="launch.links.video_link" class="list-group-item">
     <app-video [link]="launch.links.video_link"></app-video>
