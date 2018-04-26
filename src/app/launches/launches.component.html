@@ -6,9 +6,9 @@
   </tr>
 
   <tr *ngFor="let launch of launches">
-    <td>1{{launch.flight_number}}</td>
-    <td>2{{launch.launch_date_utc}}</td>
-    <td>3{{launch.launch_date_local}}</td>
+    <td>{{launch.flight_number}}</td>
+    <td>{{launch.launch_date_utc}}</td>
+    <td>{{launch.launch_date_local}}</td>
   </tr>
 
 </table>
