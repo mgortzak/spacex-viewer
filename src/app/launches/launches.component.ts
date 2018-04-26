@@ -10,13 +10,18 @@ import {Observable} from "rxjs/Observable";
 })
 export class LaunchesComponent implements OnInit {
 
-  launches: Observable<Launch[]>;
+  launches$: Observable<Launch[]>;
+
+  selectedLaunch: Launch;
 
   constructor(private launchesService: LaunchesService) {
   }
 
   ngOnInit() {
-    this.launches = this.launchesService.pastLaunches()
+    this.launches$ = this.launchesService.pastLaunches()
+  }
 
+  select(launch) {
+    this.selectedLaunch = launch
   }
 }

@@ -1,14 +1,19 @@
-<table>
-  <tr>
-    <th>Flight Number</th>
-    <th>Launch date @ UTC</th>
-    <th>Launch date @ local</th>
-  </tr>
+<div>
+  <div>
+    <table>
+      <tr>
+        <th>Flight Number</th>
+        <th>Launch date @ UTC</th>
+      </tr>
 
-  <tr *ngFor="let launch of launches | async">
-    <td>{{launch.flight_number}}</td>
-    <td>{{launch.launch_date_utc}}</td>
-    <td>{{launch.launch_date_local}}</td>
-  </tr>
+      <tr *ngFor="let launch of launches$ | async" (click)="select(launch)">
+        <td>{{launch.flight_number}}</td>
+        <td>{{launch.launch_date_utc}}</td>
+      </tr>
 
-</table>
+    </table>
+  </div>
+  <div *ngIf="selectedLaunch">
+    <app-details [launch]="selectedLaunch"></app-details>
+  </div>
+</div>
