@@ -8,6 +8,8 @@ import {LaunchesService} from "./services/launches.service";
 import {HttpClientModule} from "@angular/common/http";
 import {HttpModule} from "@angular/http";
 import {DetailsComponent} from './details/details.component';
+import {YoutubePlayerModule} from "ng2-youtube-player";
+import {VideoComponent} from './video/video.component';
 
 
 @NgModule({
@@ -15,11 +17,13 @@ import {DetailsComponent} from './details/details.component';
     AppComponent,
     LaunchesComponent,
     DetailsComponent,
+    VideoComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    HttpModule
+    HttpModule,
+    YoutubePlayerModule
   ],
   providers: [LaunchesService],
   bootstrap: [AppComponent]
